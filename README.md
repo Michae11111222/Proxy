@@ -6,10 +6,9 @@
 <title>Game Plug</title>
 <style>
   :root {
-    --red: #ff0000;
+    --white: #fffff;
     --black: #000;
     --dark: #111;
-    --light-red: #ff4d4d;
   }
 
   /* ===== BACKGROUND STARS ===== */
@@ -145,18 +144,7 @@
     font-weight: bold;
   }
 
-  .loading-text {
-    margin-top: 15px;
-    color: var(--light-red);
-    display: none;
-  }
-
-  .error-text {
-    margin-top: 15px;
-    color: #ff4747;
-    display: none;
-  }
-
+  
   /* ===== FOOTER ===== */
   footer {
     margin-top: 60px;
@@ -185,36 +173,10 @@
     <option>Fast Mode</option>
   </select>
 
-  <button onclick="fakeProxy()">Launch</button>
+  <button onclick="Proxy()">Launch</button>
 
   <p class="loading-text" id="loading">Loading…</p>
-  <p class="error-text" id="error">Proxy failed (mock only)</p>
-  <p style="margin-top: 10px; color: var(--light-red); font-size: 0.9rem;">
-    This is a visual mock UI only — no real bypassing.
-  </p>
-</div>
 
-<div class="grid">
-  <a class="card" href="#">
-    <h2>Game 1</h2>
-    <p>Play</p>
-  </a>
-
-  <a class="card" href="#">
-    <h2>Game 2</h2>
-    <p>Play</p>
-  </a>
-
-  <a class="card" href="#">
-    <h2>Game 3</h2>
-    <p>Play</p>
-  </a>
-
-  <a class="card" href="#">
-    <h2>More Coming Soon</h2>
-    <p>Stay Tuned</p>
-  </a>
-</div>
 
 <footer>
   <p>© 2025 Game Plug</p>
@@ -224,8 +186,7 @@
   function Proxy() {
     let url = document.getElementById("proxy-url").value;
     let loading = document.getElementById("loading");
-    let error = document.getElementById("error");
-
+    
     loading.style.display = "block";
     error.style.display = "none";
 
