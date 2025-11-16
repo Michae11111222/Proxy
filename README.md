@@ -221,7 +221,7 @@
 </footer>
 
 <script>
-  function fakeProxy() {
+  function Proxy() {
     let url = document.getElementById("proxy-url").value;
     let loading = document.getElementById("loading");
     let error = document.getElementById("error");
